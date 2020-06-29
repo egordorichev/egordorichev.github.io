@@ -99,15 +99,6 @@ h1 {
 .button:hover {
   background: var(--text);
   color: var(--bg);
-  letter-spacing: 1px;
-
-  animation: glowing 1000ms infinite;
-}
-
-@keyframes glowing {
-  0% { background-color: var(--text); border-color: var(--text); }
-  50% { background-color: var(--text-lighter); border-color: var(--text-lighter); }
-  100% { background-color: var(--text); border-color: var(--text); }
 }
 
 .button:active:hover {
@@ -115,10 +106,9 @@ h1 {
   -webkit-animation: none;
   -moz-animation: none;
   -o-animation: none;
-  background-color: var(--text-dark) !important;
-  border-color: var(--text-dark) !important;
+  background-color: var(--text-dark);
+  border-color: var(--text-dark);
   color: var(--bg);
-  letter-spacing: 3px;
 }
 
 .juice {

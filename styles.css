@@ -5,9 +5,9 @@
 
   --bg: #131313;
   --header-text: #d3fc7e;
-  --text: #ccffcc;
-  --text-dark: #33984b;
-  --text-lighter: #c7cfdd;
+  --text: #eeeeee;
+  --text-dark: #1e6f50;
+  --text-lighter: #33984b;
 
   /*--bg: #fff;
   --header-text: #1a1932;
@@ -17,8 +17,9 @@
 }
 
 body, html {
+  font-size: 108%;
   width: 100%;
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'Quattrocento Sans', sans-serif;
   background-color: var(--bg);
   color: var(--text);
 }
@@ -31,6 +32,7 @@ body {
 
 .page_container {
   max-width: 600px;
+  width: 90%;
   background-color: rgba(0, 0, 0, 0.2);
   padding: 30px;
   margin: 0 auto;
@@ -63,7 +65,6 @@ h1 {
 
 .extra {
   color: var(--text-lighter);
-  font-weight: bold;
 }
 
 .separator {
@@ -82,10 +83,11 @@ h1 {
   background: var(--bg);
   border: 1px solid var(--text);
   color: var(--text);
-  border-radius: 5px;
-  font-family: 'Source Code Pro', monospace !important;
+  border-radius: 2px;
+  font-family: 'Quattrocento Sans', sans-serif !important;
   font-weight: bold;
   transition: all 0.2s;
+  text-decoration: none;
 }
 
 .button_wrapper {
@@ -96,11 +98,6 @@ h1 {
 
 .button:hover {
   background: var(--text);
-  padding: 0.8em;
-  margin-top: 0.1em;
-  margin-bottom: 0.1em;
-  padding-left: 3.5em;
-  padding-right: 3.5em;
   color: var(--bg);
   letter-spacing: 1px;
 
@@ -120,20 +117,18 @@ h1 {
   -o-animation: none;
   background-color: var(--text-dark) !important;
   border-color: var(--text-dark) !important;
-  padding: 0.6em;
-  margin-top: 0.2em;
-  margin-bottom: 0.2em;
-  padding-left: 8em;
-  padding-right: 8em;
   color: var(--bg);
   letter-spacing: 3px;
 }
 
 .juice {
-	animation: rainbow 2.5s linear infinite;
   display: inline-block;
+  cursor: pointer;
 }
 
+.juice:hover {
+	animation: rainbow 2.5s linear infinite;
+}
 
 @keyframes rainbow{
 	100%,0%{
@@ -185,12 +180,12 @@ h1 {
 }
 
 .links > a {
-  color: var(--text-dark);
+  color: var(--text-lighter);
   text-decoration: none;
   transition: all 0.2s;
 }
 
 .links > a:hover {
-  color: var(--text-lighter);
+  color: var(--text-darker);
   text-decoration: underline;
 }

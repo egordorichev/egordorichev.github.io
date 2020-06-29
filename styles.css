@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+
+  --bg: #131313;
+  --header-text: #d3fc7e;
+  --text: #ccffcc;
+  --text-dark: #33984b;
+  --text-lighter: #c7cfdd;
+
+  /*--bg: #fff;
+  --header-text: #1a1932;
+  --text: #0e071b;
+  --text-dark: #000;
+  --text-lighter: #2a2f4e;*/
+}
+
+body, html {
+  width: 100%;
+  font-family: 'Source Code Pro', monospace;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+body {
+  padding: 30px;
+  box-sizing: border-box;
+  background: url("http://api.thumbr.it/whitenoise-128x128.png?background=131313ff&noise=272727&density=31&opacity=44");
+}
+
+.page_container {
+  max-width: 600px;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+h1, h2, h3 {
+  margin-bottom: 0.2em;
+  padding-top: 2em;
+  font-style: bold;
+  color: var(--header-text);
+}
+
+h1 {
+  padding-top: 0;
+}
+
+h3 {
+  font-size: 1.3em;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+.plus {
+  color: var(--text-dark);
+}
+
+.extra {
+  color: var(--text-lighter);
+  font-weight: bold;
+}
+
+.separator {
+  height: 4em;
+  display: block;
+  width: 100%;
+}
+
+.button {
+  outline: none;
+  margin: auto;
+  text-align: center;
+  padding: 1em;
+  padding-left: 3em;
+  padding-right: 3em;
+  background: var(--bg);
+  border: 1px solid var(--text);
+  color: var(--text);
+  border-radius: 5px;
+  font-family: 'Source Code Pro', monospace !important;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.button_wrapper {
+  text-align: center;
+  margin-top: 3em;
+  margin-bottom: 0.5em;
+}
+
+.button:hover {
+  background: var(--text);
+  padding: 0.8em;
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+  padding-left: 3.5em;
+  padding-right: 3.5em;
+  color: var(--bg);
+  letter-spacing: 1px;
+
+  animation: glowing 1000ms infinite;
+}
+
+@keyframes glowing {
+  0% { background-color: var(--text); border-color: var(--text); }
+  50% { background-color: var(--text-lighter); border-color: var(--text-lighter); }
+  100% { background-color: var(--text); border-color: var(--text); }
+}
+
+.button:active:hover {
+  animation: none;
+  -webkit-animation: none;
+  -moz-animation: none;
+  -o-animation: none;
+  background-color: var(--text-dark) !important;
+  border-color: var(--text-dark) !important;
+  padding: 0.6em;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+  padding-left: 8em;
+  padding-right: 8em;
+  color: var(--bg);
+  letter-spacing: 3px;
+}
+
+.juice {
+	animation: rainbow 2.5s linear infinite;
+  display: inline-block;
+}
+
+
+@keyframes rainbow{
+	100%,0%{
+		color: rgb(255,0,0);
+    letter-spacing: 1px;
+	}
+	8%{
+		color: rgb(255,127,0);
+	}
+	16%{
+		color: rgb(255,255,0);
+    transform: rotate(0deg);
+	}
+	25%{
+		color: rgb(127,255,0);
+	}
+	33%{
+		color: rgb(0,255,0);
+    letter-spacing: 1.4px;
+	}
+	41%{
+		color: rgb(0,255,127);
+	}
+	50%{
+		color: rgb(0,255,255);
+	}
+	58%{
+		color: rgb(0,127,255);
+	}
+	66%{
+		color: rgb(0,0,255);
+	}
+	75%{
+		color: rgb(127,0,255);
+    letter-spacing: 1px;
+    transform: rotate(5deg);
+	}
+	83%{
+		color: rgb(255,0,255);
+	}
+	91%{
+		color: rgb(255,0,127);
+    transform: rotate(-5deg);
+	}
+}
+
+.links {
+  font-size: 0.9em;
+}
+
+.links > a {
+  color: var(--text-dark);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.links > a:hover {
+  color: var(--text-lighter);
+  text-decoration: underline;
+}

@@ -8,12 +8,7 @@
   --text: #eeeeee;
   --text-dark: #1e6f50;
   --text-lighter: #33984b;
-
-  /*--bg: #fff;
-  --header-text: #1a1932;
-  --text: #0e071b;
-  --text-dark: #000;
-  --text-lighter: #2a2f4e;*/
+  --text-light: #e3eebe;
 }
 
 body, html {
@@ -64,7 +59,7 @@ h1 {
 }
 
 .extra {
-  color: var(--text-lighter);
+  color: var(--text-light);
 }
 
 .separator {
@@ -77,9 +72,9 @@ h1 {
   outline: none;
   margin: auto;
   text-align: center;
-  padding: 1em;
-  padding-left: 3em;
-  padding-right: 3em;
+  padding: 0.5em;
+  padding-left: 2em;
+  padding-right: 2em;
   background: var(--bg);
   border: 1px solid var(--text);
   color: var(--text);
@@ -92,13 +87,14 @@ h1 {
 
 .button_wrapper {
   text-align: center;
-  margin-top: 3em;
-  margin-bottom: 0.5em;
+  margin-top: 2em;
+  margin-bottom: 0.25em;
 }
 
 .button:hover {
   background: var(--text);
   color: var(--bg);
+  text-decoration: none;
 }
 
 .button:active:hover {
@@ -169,13 +165,42 @@ h1 {
   font-size: 0.9em;
 }
 
-.links > a {
+a {
   color: var(--text-lighter);
   text-decoration: none;
   transition: all 0.2s;
 }
 
-.links > a:hover {
-  color: var(--text-darker);
+a:hover {
+  color: var(--header-text);
   text-decoration: underline;
+}
+
+table {
+  border: none;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 5px;
+}
+
+tr:nth-child(even) {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+td {
+  vertical-align: top;
+  height: 2em;
+  color: var(--text-light);
+}
+
+.left {
+  width: 41%;
+  color: var(--text);
+}
+
+.horizontal_separator {
+  width: 1em;
+  display: inline-block;
 }

@@ -25,14 +25,25 @@ body {
   background: url("http://api.thumbr.it/whitenoise-128x128.png?background=131313ff&noise=272727&density=31&opacity=44");
 }
 
-.page_container {
-  max-width: 600px;
-  width: 90%;
+.features {
+  line-height: 1.4;
+}
+
+.inner_conainer {
   background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
   padding: 30px;
+}
+
+.footer {
+  padding: 30px;
+}
+
+.page_container {
+  max-width: 800px;
+  width: 90%;
   margin: 0 auto;
   box-sizing: border-box;
-  border-radius: 5px;
 }
 
 h1, h2, h3 {
@@ -181,6 +192,22 @@ table {
   border-collapse: collapse;
 }
 
+table tr:first-child td:first-child {
+  border-top-left-radius: 5px;
+}
+
+table tr:first-child td:last-child {
+  border-top-right-radius: 5px;
+}
+
+table tr:last-child td:first-child {
+  border-bottom-left-radius: 5px;
+}
+
+table tr:last-child td:last-child {
+  border-bottom-right-radius: 5px;
+}
+
 td {
   padding: 5px;
 }
@@ -189,14 +216,19 @@ tr:nth-child(even) {
   background: rgba(0, 0, 0, 0.3);
 }
 
+tr:nth-child(odd) {
+  background: rgba(255, 255, 255, 0.05);
+}
+
 td {
-  vertical-align: top;
+  vertical-align: center;
   height: 2em;
   color: var(--text-light);
 }
 
 .left {
   width: 41%;
+  padding-left: 10px;
   color: var(--text);
 }
 

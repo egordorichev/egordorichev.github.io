@@ -17,22 +17,25 @@
         <h1>Egor Dorichev.</h1>
         Hi, I'm an <span id="age">18</span> year old programmer & game developer.
 
-        <div class="button_wrapper">
-          <a href="https://egordorichev.github.io/cv.pdf" target="_blank" class="button">Resume</a>
-          <span class="horizontal_separator"></span>
-          <a href="mailto:egor@rexcellentgames.com" target="_blank" class="button">Contact Me</a>
+        <div class="features">
+          <h3>About</h3>
+          <span class="plus">+</span> Game Designer<br/>
+          <span class="plus">+</span> Developer<br/>
+          <span class="plus">+</span> Artist<br/>
+          <span class="plus">+</span> <span id="dev_age">7</span> years of experience<br/>
+
+          <h3>Skills</h3>
+
+          <span class="plus">+</span> Mastery of game feel <span class="juice">(juice)</span><br/>
+          <span class="plus">+</span> Quick prototyping of ideas<br/>
+          <span class="plus">+</span> Team work & working single<br/>
+          <span class="plus">+</span> Experience and understanding of all sides of game developement, including marketing and publishing on <a target="_blank" href="https://store.steampowered.com/app/851150/Burning_Knight/">Steam</a> and <a target="_blank" href="https://egordorichev.itch.io/">Itch.io</a><br/>
         </div>
 
-        <div class="features">
-          <br/>
-          <span class="plus">+ 2020</span> Burning Knight<br/>
-          <span class="plus">+ 2019</span> Nüllptr, Ma Puzzle, Antiban, Lit, byejava<br/>
-          <span class="plus">+ 2018</span> Curse of the Arrow, Milt, Jlim, The Way<br/>
-          <span class="plus">+ 2017</span> First gamejams, neko8, Lost Strawberry<br/>
-          <span class="plus">+ 2016</span> A lot of unfinished roguelikes<br/>
-          <span class="plus">+ 2015</span> First 2 games finished <br/>
-          <span class="plus">+ 2014</span> Researching & developing simle OS<br/>
-          <span class="plus">+ 2013</span> Designing & making websites
+        <div class="button_wrapper">
+          <a href="https://egordorichev.itch.io" target="_blank" class="button">Projects</a>
+          <span class="horizontal_separator"></span>
+          <a href="https://egordorichev.github.io/cv.pdf" target="_blank" class="button">Resume</a>
         </div>
 
         <h3>Frameworks / Languages</h3>
@@ -75,21 +78,35 @@
           </tr>
         </table>
 
-        <h3>Projects</h3>
-        <input id="search" placeholder="Search..."></input>
-
-        <div id="projects">
-
-        </div>
+        <div class="button_wrapper"><a href="mailto:egor@rexcellentgames.com" target="_blank" class="button">Contact Me</a></div>
       </div>
 
       <div class="footer">
         Thanks, Egor.<br/>
-        <span class="links"><a href="https://github.com/egordorichev" target="_blank">Github</a> | <a href="https://twitter.com/egordorichev" target="_blank">Twitter</a> | <a href="https://www.linkedin.com/in/egordorichev/" target="_blank">LinkedIn</a> | <a href="https://egordorichev.itch.io" target="_blank">Itch.io</a></span>
+        <span class="links"><a href="https://github.com/egordorichev" target="_blank">Github</a> | <a href="https://twitter.com/egordorichev" target="_blank">Twitter</a> | <a href="https://www.linkedin.com/in/egor-dorichev-3545971b1/" target="_blank">LinkedIn</a> | <a href="https://egordorichev.itch.io" target="_blank">Itch.io</a></span>
       </div>
     </div>
   </body>
-  <script src="index.js"></script>
+  <script>
+    const daysPerYear = 365;
+    const msPerDay = 1000 * 60 * 60 * 24;
+
+    function daysBetween(date1, date2) {
+      return Math.round(Math.floor((date2.getTime() - date1.getTime()) / msPerDay) / daysPerYear);
+    }
+
+    var age = document.getElementById("age");
+
+    if (age) {
+      age.innerHTML = daysBetween(new Date(2002, 6, 29), new Date())
+    }
+
+    var devAge = document.getElementById("dev_age");
+
+    if (devAge) {
+      devAge.innerHTML = daysBetween(new Date(2013, 4, 20), new Date())
+    }
+  </script>
   <!-- Prevents chrome from firing transitions (space is important!!) -->
   <script> </script>
 </html>

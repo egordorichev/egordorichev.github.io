@@ -1,2 +1,3 @@
-# egordorichev.github.io
-Don't mind me, I just need to host some stuff right from the repos
+# [egordorichev.github.io](https://egordorichev.github.io/)
+
+My resume

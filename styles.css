@@ -96,6 +96,7 @@ h1 {
 }
 
 .button_wrapper {
+  text-align: center;
   margin-top: 2em;
   margin-bottom: 0.25em;
 }
@@ -232,51 +233,6 @@ td {
 }
 
 .horizontal_separator {
+  width: 1em;
   display: inline-block;
-}
-
-#search {
-  background: #080808;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border: 1px solid var(--text);
-  border-radius: 5px;
-  padding: 10px;
-  color: var(--text);
-  outline: none !important;
-}
-
-#search::placeholder {
-  font-family: 'Quattrocento Sans', sans-serif;
-  color: #5d5d5d;
-}
-
-.project {
-  background: #080808;
-  border-radius: 5px;
-  padding: 0;
-  margin-bottom: 20px;
-}
-
-.project > h3 {
-  padding: 0;
-  padding-left: 10px;
-  padding-top: 10px;
-}
-
-.project > img {
-  padding-left: 10px;
-  padding-right: 10px;
-  max-width: 100%;
-  box-sizing: border-box;
-  display: block;
-  border-radius: 5px;
-}
-
-.project_info {
-  padding: 10px;
-}
-
-.tags {
-  margin-top: 5px;
 }

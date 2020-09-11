@@ -79,8 +79,9 @@ h1 {
 }
 
 .button {
+  display: inline-block;
   outline: none;
-  margin: auto;
+  margin: 20px auto;
   text-align: center;
   padding: 0.5em;
   padding-left: 1em;

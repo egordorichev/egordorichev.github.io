@@ -1,122 +1,15 @@
-<!-- made with <3 by @egordorichev -->
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@egordorichev</title>
-    <link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-    <meta name="description" content="Egor Dorichev">
-    <meta name="keywords" content="developer, programmer">
-    <meta name="author" content="Egor Dorichev">
+    <script type="module" crossorigin src="/assets/index.fd51b2e5.js"></script>
+    <link rel="stylesheet" href="/assets/index.58b4d174.css">
   </head>
   <body>
-    <div class="page_container">
-      <div class="inner_conainer">
-        <h1>Egor Dorichev.</h1>
-        Hi, I'm an <span id="age">18</span> year old programmer & game developer.
-
-        <div class="button_wrapper">
-          <a href="https://egordorichev.itch.io" target="_blank" class="button">Projects</a>
-          <a href="https://egordorichev.github.io/cv_egordorichev_gd.pdf" target="_blank" class="button">Download CV</a>
-          <a href="mailto:egor@rexcellentgames.com" target="_blank" class="button">Contact Me</a>
-        </div>
-        
-        <div class="features">
-          <h3>About</h3>
-          <span class="plus">+</span> Game Designer<br/>
-          <span class="plus">+</span> Developer<br/>
-          <span class="plus">+</span> Artist<br/>
-          <span class="plus">+</span> <span id="dev_age">7</span> years of experience<br/>
-
-          <h3>Skills</h3>
-
-          <span class="plus">+</span> Mastery of game feel <span class="juice">(juice)</span><br/>
-          <span class="plus">+</span> Quick prototyping of ideas<br/>
-          <span class="plus">+</span> Creating & animating sprites & tilesets<br/>
-          <span class="plus">+</span> Team work & working single<br/>
-          <span class="plus">+</span> Experience and understanding of all sides of game developement, including marketing and publishing on <a target="_blank" href="https://store.steampowered.com/app/851150/Burning_Knight/">Steam</a> and <a target="_blank" href="https://egordorichev.itch.io/">Itch.io</a><br/>
-        </div>
-
-        <h3>Frameworks / Languages</h3>
-
-        <br/>
-        <table>
-          <tr>
-            <td class="left"><span class="plus">+</span> Gamedev</td>
-            <td>C# (<a target="_blank" href="https://www.monogame.net/">MonoGame</a>, <a target="_blank" href="https://unity.com/">Unity</a>), Java (<a target="_blank" href="https://libgdx.badlogicgames.com/">LibGDX</a>), Lua (<a target="_blank" href="https://love2d.org/">Löve2D</a>, <a target="_blank" href="https://www.lexaloffle.com/pico-8.php">PICO-8</a>), C (<a target="_blank" href="https://www.libsdl.org/download-2.0.php">SDL2</a>), C++ (<a target="_blank" href="https://www.sfml-dev.org/">SFML</a>)</td>
-          </tr>
-
-          <tr>
-            <td class="left"><span class="plus">+</span> Version control</td>
-            <td>Git</td>
-          </tr>
-
-          <tr>
-            <td class="left"><span class="plus">+</span> Build systems & CI</td>
-            <td>NuGet, Gradle, Make, CMake, Github Actions, TeamCity</td>
-          </tr>
-
-          <tr>
-            <td class="left"><span class="plus">+</span> Bot development</td>
-            <td>Twitch, Discord</td>
-          </tr>
-
-          <tr>
-            <td class="left"><span class="plus">+</span> AVR dev</td>
-            <td>C, C++, Assembler</td>
-          </tr>
-
-          <tr>
-            <td class="left"><span class="plus">+</span> Interpreter dev</td>
-            <td><a target="_blank" href="https://github.com/egordorichev/lit">Lit</a>, <a target="_blank" href="https://github.com/egordorichev/byejava">Java → C#</a>, <a target="_blank" href="https://github.com/egordorichev/lunas">Lua → JavaScript</a></td>
-          </tr>
-
-          <tr>
-            <td class="left"><span class="plus">+</span> Web dev</td>
-            <td>HTML, CSS, JavaScript, Node.js, Express, React, MongoDB, PHP, MySQL</td>
-          </tr>
-
-          <tr>
-            <td class="left"><span class="plus">+</span> Mobile dev</td>
-            <td>JavaScript, React Native, Java, Android SDK</td>
-          </tr>
-        </table>
-
-        <div class="button_wrapper">
-          <a href="https://egordorichev.itch.io" target="_blank" class="button">Projects</a>
-          <a href="https://egordorichev.github.io/cv_egordorichev_gd.pdf" target="_blank" class="button">Download CV</a>
-          <a href="mailto:egor@rexcellentgames.com" target="_blank" class="button">Contact Me</a>
-        </div>
-      </div>
-
-      <div class="footer">
-        Thanks, Egor.<br/>
-        <span class="links"><a href="https://github.com/egordorichev" target="_blank">Github</a> | <a href="https://twitter.com/egordorichev" target="_blank">Twitter</a> | <a href="https://www.linkedin.com/in/egor-dorichev-3545971b1/" target="_blank">LinkedIn</a> | <a href="https://egordorichev.itch.io" target="_blank">Itch.io</a></span>
-      </div>
-    </div>
+    <div id="app"></div>
+    
   </body>
-  <script>
-    const daysPerYear = 365;
-    const msPerDay = 1000 * 60 * 60 * 24;
-
-    function daysBetween(date1, date2) {
-      return Math.floor(Math.floor((date2.getTime() - date1.getTime()) / msPerDay) / daysPerYear)
-    }
-
-    var age = document.getElementById("age");
-
-    if (age) {
-      age.innerHTML = daysBetween(new Date(2002, 6, 29), new Date())
-    }
-
-    var devAge = document.getElementById("dev_age");
-
-    if (devAge) {
-      devAge.innerHTML = daysBetween(new Date(2013, 4, 20), new Date())
-    }
-  </script>
-  <!-- Prevents chrome from firing transitions (space is important!!) -->
-  <script> </script>
 </html>
